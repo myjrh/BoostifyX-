@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - BoostifyX</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK (for theme consistency) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="firebase.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-theme">
+    <div class="theme-toggle">
+        <button id="themeSwitch" class="neon-btn">🌓</button>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">BoostifyX</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-container">
+        <div class="glass-card">
+            <h2>Contact Support</h2>
+            <form id="contactForm">
+                <textarea id="contactMessage" placeholder="Type your message here..." rows="5" required></textarea>
+                <button type="submit" class="neon-btn">Send via WhatsApp</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 BoostifyX</p>
+    </footer>
+</body>
+</html>
