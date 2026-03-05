@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit - BoostifyX</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="firebase.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-theme">
+    <div class="theme-toggle">
+        <button id="themeSwitch" class="neon-btn">🌓</button>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">BoostifyX</div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="deposit.html">Deposit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="deposit-container">
+        <div class="glass-card">
+            <h2>Add Funds</h2>
+            <form id="depositForm">
+                <input type="number" id="depositAmount" placeholder="Enter amount (₹)" min="1" required>
+                <div class="payment-options">
+                    <button type="button" id="payNowBtn" class="neon-btn">Pay Now (UPI)</button>
+                    <button type="button" id="generateQrBtn" class="neon-btn">Generate QR</button>
+                </div>
+                <div id="qrContainer" style="text-align: center; margin-top: 1rem;"></div>
+                <button type="button" id="iHavePaidBtn" class="neon-btn" style="display:none;">I Have Paid</button>
+            </form>
+            <p id="depositMessage"></p>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 BoostifyX</p>
+    </footer>
+</body>
+</html>
