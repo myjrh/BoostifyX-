@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BoostifyX</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="firebase.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-theme">
+    <div class="theme-toggle">
+        <button id="themeSwitch" class="neon-btn">🌓</button>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">BoostifyX</div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="deposit.html">Deposit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <!-- Welcome & User Info -->
+        <section class="user-info glass-card">
+            <h2>Welcome, <span id="userEmail"></span></h2>
+            <p>User ID: <span id="userId"></span></p>
+            <p>Balance: ₹<span id="userBalance">0</span></p>
+        </section>
+
+        <!-- Notification Area -->
+        <section class="notifications glass-card">
+            <h3>Notifications</h3>
+            <div id="notificationList"></div>
+        </section>
+
+        <!-- Service Order Section -->
+        <section class="order-section glass-card">
+            <h3>Order Services</h3>
+            <form id="orderForm">
+                <select id="serviceSelect" required>
+                    <option value="">Select Service</option>
+                </select>
+                <input type="url" id="link" placeholder="Public Link (e.g., Instagram post URL)" required>
+                <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+                <p>Total Price: ₹<span id="totalPrice">0</span></p>
+                <button type="submit" class="neon-btn">Place Order</button>
+            </form>
+        </section>
+
+        <!-- Order History -->
+        <section class="order-history glass-card">
+            <h3>Order History</h3>
+            <table id="orderTable">
+                <thead>
+                    <tr><th>Service</th><th>Link</th><th>Qty</th><th>Price</th><th>Status</th><th>Date</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 BoostifyX</p>
+    </footer>
+</body>
+</html>
