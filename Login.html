@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BoostifyX</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="firebase.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-theme">
+    <div class="theme-toggle">
+        <button id="themeSwitch" class="neon-btn">🌓</button>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">BoostifyX</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms</a></li>
+        </ul>
+    </nav>
+
+    <main class="auth-container">
+        <div class="glass-card auth-card">
+            <h2>Login / Sign Up</h2>
+            <form id="authForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <div class="btn-group">
+                    <button type="button" id="loginBtn" class="neon-btn">Login</button>
+                    <button type="button" id="signupBtn" class="neon-btn">Sign Up</button>
+                </div>
+                <p id="authMessage"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 BoostifyX</p>
+    </footer>
+</body>
+</html>
